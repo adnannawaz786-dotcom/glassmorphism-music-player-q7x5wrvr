@@ -1,4 +1,3 @@
-```javascript
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -19,4 +18,3 @@ module.exports = {
     require('tailwindcss-animate'),
   ],
 };
-```
