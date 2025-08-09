@@ -1,0 +1,80 @@
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1f2937;
+  --color-secondary: #3b82f6;
+  --color-background: rgba(255, 255, 255, 0.7);
+  --color-text: #111827;
+  --color-glass: rgba(255, 255, 255, 0.1);
+  --backdrop-blur: blur(10px);
+}
+
+body {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+  @apply text-base text-color-text;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+a {
+  @apply text-color-secondary hover:underline;
+}
+
+button {
+  @apply bg-color-primary text-white font-medium py-2 px-4 rounded hover:bg-opacity-90;
+}
+
+.card {
+  @apply bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+.glassmorphism {
+  background: var(--color-glass);
+  backdrop-filter: var(--backdrop-blur);
+}
+
+*:focus {
+  @apply outline-none ring-2 ring-color-secondary;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary hover:bg-opacity-80;
+  }
+
+  .badge {
+    @apply inline-block px-2 py-1 text-xs font-semibold text-white bg-color-secondary rounded-full;
+  }
+
+  .separator {
+    @apply border-t border-color-primary my-4;
+  }
+}
+
+@layer utilities {
+  .bg-glass {
+    background: var(--color-glass);
+    backdrop-filter: var(--backdrop-blur);
+  }
+
+  .text-glass {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .shadow-glass {
+    @apply shadow-lg;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+```
