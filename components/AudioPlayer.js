@@ -1,4 +1,3 @@
-```javascript
 import { useState, useRef } from 'react';
 import { Button } from '../components/ui/button';
 import { motion } from 'framer-motion';
@@ -54,4 +53,3 @@ const AudioPlayer = () => {
 };
 
 export default AudioPlayer;
-```
